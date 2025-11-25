@@ -68,6 +68,68 @@ df.ffill()
 df.bfill()
 <img width="1260" height="600" alt="{2F042E11-C5AD-4DB8-806C-73F22F8E72E5}" src="https://github.com/user-attachments/assets/4df9b05e-ea92-45a6-8e64-d0e96a96bc1b" />
 
+import pandas as pd
+import numpy as np
+from scipy import stats
+import seaborn as sns
+ir=pd.read_csv('iris.csv')
+ir
+<img width="651" height="440" alt="{C2058DA5-79D4-4E71-AA7D-AE7054C14C3F}" src="https://github.com/user-attachments/assets/47532f5b-0272-4754-9592-2afdfb313180" />
+
+sns.boxplot(ir)
+<img width="751" height="559" alt="{4919CB20-DC59-4B02-BCBD-2F9E51ABB730}" src="https://github.com/user-attachments/assets/743fda30-0385-4398-8e05-9a4ee2231dcf" />
+
+sns.scatterplot(ir)
+<img width="844" height="563" alt="{2C381C13-7EC0-4422-ABAD-9872DCD1BC93}" src="https://github.com/user-attachments/assets/567b4da3-20be-4cdf-8128-f0be41343759" />
+
+q1=ir.sepal_width.quantile(0.25)
+q3=ir.sepal_width.quantile(0.75)
+iqr=q3-q1
+print(iqr)
+<img width="988" height="37" alt="image" src="https://github.com/user-attachments/assets/048aa514-2abf-4917-8c6d-00761c56913c" />
+
+rid=ir[((ir.sepal_width<(q1-1.5*iqr))|(ir.sepal_width>(q3+1.5*iqr)))]
+rid['sepal_width']
+<img width="422" height="128" alt="image" src="https://github.com/user-attachments/assets/87bfd677-39f0-4519-a126-fcbc60c96b94" />
+
+delid=ir[~((ir.sepal_width<(q1-1.5*iqr))|(ir.sepal_width>(q3+1.5*iqr)))]
+delid
+<img width="678" height="454" alt="{6BA3CB27-42E3-4668-8B57-23FBA24E5E57}" src="https://github.com/user-attachments/assets/6fb2b50a-0421-4fe9-8a56-e182b1b72bee" />
+
+data=[1,12,15,18,21,24,27,30,33,36,39,42,45,48,51,54,57,60,63,66,69,72,75,78,81,84,87,90,93]
+df=pd.DataFrame(data)
+mean=np.mean(data)
+mean
+<img width="628" height="42" alt="{D6D7DB45-B579-4387-9D11-4C0084A218E7}" src="https://github.com/user-attachments/assets/d21e1d43-b21c-479b-a33c-88e8e3d919a1" />
+
+std=np.std(data)
+std
+z=np.abs(stats.zscore(df))
+z
+<img width="204" height="760" alt="{2B609550-4052-460D-A2F3-54B875A8B9E2}" src="https://github.com/user-attachments/assets/bbf80dba-584a-468c-9658-58ee80482a9e" />
+<img width="223" height="200" alt="image" src="https://github.com/user-attachments/assets/997bb1ce-5dbd-4817-afdd-c11e40439eee" />
+
+threshold=3
+outliers=df[abs(df)>3]
+print("Outliers:")
+print(outliers)
+<img width="1116" height="672" alt="{43AABDD7-A6AF-41B0-8F36-E06B7925C475}" src="https://github.com/user-attachments/assets/a6828e3d-2208-4279-85e9-84cde5c2f0fa" />
+
+df_cleaned=df[z<=threshold]
+df_cleaned
+<img width="1238" height="736" alt="{023C33FE-0537-4EC2-82C9-06DE3FB43520}" src="https://github.com/user-attachments/assets/a917fc58-4085-41c7-a449-75d0228fd6bd" />
+<img width="1143" height="239" alt="image" src="https://github.com/user-attachments/assets/1fbdbc82-24df-4c20-8c6a-fec9053571cb" />
+
+
+
+
+
+
+
+
+
+
+
 
 
 
