@@ -120,32 +120,6 @@ df_cleaned
 <img width="1238" height="736" alt="{023C33FE-0537-4EC2-82C9-06DE3FB43520}" src="https://github.com/user-attachments/assets/a917fc58-4085-41c7-a449-75d0228fd6bd" />
 <img width="1143" height="239" alt="image" src="https://github.com/user-attachments/assets/1fbdbc82-24df-4c20-8c6a-fec9053571cb" />
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                     
 # Result
-          
+          Thus we have cleaned the data and removed the outliers by detection using IQR and Z-score method.
