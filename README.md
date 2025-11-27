@@ -22,7 +22,9 @@ STEP 6: Use zscore of to remove outliers
 
 # Coding and Output
 import pandas as pd
+
 data=pd.read_csv("Data_Set.csv")
+
 print(data)
 <img width="960" height="553" alt="{8C7ADB9D-7917-4519-B959-6C494D142DDB}" src="https://github.com/user-attachments/assets/c8e15d5d-0091-45e1-bb43-884ca013578a" />
 <img width="880" height="333" alt="{83719C40-EBBD-4934-AE76-C9161461F5E2}" src="https://github.com/user-attachments/assets/2d4ab867-5c3a-4947-a9b3-7e953001d67e" />
@@ -59,14 +61,26 @@ print(df)
 <img width="819" height="554" alt="{8F8530CA-3F99-41D7-B181-DBBA9630BCF8}" src="https://github.com/user-attachments/assets/7f298fc6-5082-43ba-9c45-a6d8cf4e2539" />
 <img width="766" height="321" alt="image" src="https://github.com/user-attachments/assets/4ac62a06-d638-484b-996f-268b57ea2a76" />
 
+import pandas as pd
+data=pd.read_csv("Data_Set.csv")
+print(data)
+<img width="1274" height="572" alt="{A2B65C5E-0E14-491D-8478-946CA5F0C3C3}" src="https://github.com/user-attachments/assets/3cbe3e09-7a4e-4f79-9619-6e1f3459d427" />
+<img width="1280" height="315" alt="{58D32930-425C-4A3D-8C2F-66F273E81D9E}" src="https://github.com/user-attachments/assets/7748359e-6948-496c-be4d-f3ea4d265649" />
+
+df=pd.DataFrame(data)
+print(df)
+<img width="1260" height="548" alt="{8A928D6C-4E4C-401C-8B05-6D700CDC2C61}" src="https://github.com/user-attachments/assets/6e61753a-b5b3-4589-b4f1-78b07774d6b2" />
+<img width="1248" height="315" alt="{A45EE093-BA6E-41A6-98F7-55AC7922127D}" src="https://github.com/user-attachments/assets/e8a18a85-f665-4c8b-8d2d-fc923e7a8e50" />
+
 df.fillna(0)
-<img width="1256" height="607" alt="{6DF8C21B-98EA-42A5-8C08-A6D497AD460F}" src="https://github.com/user-attachments/assets/eee2594a-dd00-4d9c-b68e-85a16ae0d258" />
+<img width="1265" height="444" alt="image" src="https://github.com/user-attachments/assets/07a1cd23-f605-49b3-bc77-118aca07fe19" />
+
 
 df.ffill()
-<img width="1280" height="594" alt="{3DFA562A-EA45-4B87-A518-F84002D50C26}" src="https://github.com/user-attachments/assets/4e58e712-658d-44e1-abf9-a0f5ab5951d3" />
+<img width="1246" height="445" alt="{959927ED-AF9D-4680-BFB5-7555B63A591B}" src="https://github.com/user-attachments/assets/9701eb42-f814-4523-ae68-1a51d87efe60" />
 
 df.bfill()
-<img width="1260" height="600" alt="{2F042E11-C5AD-4DB8-806C-73F22F8E72E5}" src="https://github.com/user-attachments/assets/4df9b05e-ea92-45a6-8e64-d0e96a96bc1b" />
+<img width="1277" height="453" alt="image" src="https://github.com/user-attachments/assets/766b3d11-ed9d-4063-aba0-fc2e13b9900a" />
 
 import pandas as pd
 import numpy as np
@@ -122,4 +136,4 @@ df_cleaned
 
                     
 # Result
-          Thus we have cleaned the data and removed the outliers by detection using IQR and Z-score method.
+          Thus, the data has been cleaned and outliers has been removed by detection using IQR and Z-score method.
